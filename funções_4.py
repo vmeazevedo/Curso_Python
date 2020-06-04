@@ -84,3 +84,7 @@ show_magicians(nomes_magicos)
 print('Lista 1: ' + str(nomes_magicos))
 print('Lista 2: ' + str(var))
 
+'''
+8.11 - Magicos inalterados: Comece com o trabalho feito anteriormente. Chame a função make_great com uma copia da lista de nomes de magicos.
+Como a lista original nao será alterada, devolve a nova lista e armazene-a em uma lista separada. Chame show_magicians() com cada lista para mostrar que voce tem uma lista
+de nomes originais e uma lista com a expressão o Grande add ao nome de cada magico.'''
