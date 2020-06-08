@@ -116,4 +116,41 @@ restaunt.increment_number_served(5)             #Incrementamos o valor do increm
 restaunt.servidos()                             #Apresentamos o valor de pessoas
 
 '''
-9.5 - Tentativas de login: Acrescente um atributo chamado login_attempts a sua claser User ex.9.3
+9.5 - Tentativas de login: Acrescente um atributo chamado login_attempts a sua claser User ex.9.3. Escreva um método
+chamado increment_login_attempts() que incremente o valor de login_attempts em 1. Escreva outro método chamado
+reset_login_attempts() que reinicie o valor de login_attempts com 0.
+
+Crie uma instância da classe User e chame increment_login_attempts() varias vezes. Exiba o valor de login_attempts
+para garantir que ele foi incrementado de forma apropriada e, em seguida, chame reset_login_attempts(). Exiba
+login_attempts novamente para garantir que seu valor foi reiniciado com 0.'''
+print()
+class User():
+
+    def __init__(self, first_name, last_name, age, city, login_attempts = 0):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.city = city
+        self.login_attempts = login_attempts
+
+    def describe_user(self):
+        print('\nNome: ' + self.first_name.title() + ' ' + self.last_name.title() + ', Cidade: ' + self.city.title() + ', Idade: ' + str(self.age) + '.')
+        print('Tentativas de login: ' + str(self.login_attempts) + '.')
+
+    def increment_login_attempts(self, incremento):
+        self.login_attempts += incremento
+
+    def reset_login_attempts(self, reset):
+        self.login_attempts = reset
+
+info = User('vinicius', 'azevedo', 28, 'mauá')
+info.describe_user()                                    #Apresentando valores default
+
+info.increment_login_attempts(1)                        #Incrementando 4 tentantivas de logins
+info.increment_login_attempts(1)
+info.increment_login_attempts(1)
+info.increment_login_attempts(1)
+info.describe_user()                                    #Apresentando valores atualizados
+
+info.reset_login_attempts(0)                            #Resetando as tentativas de logins
+info.describe_user()                                    #Apresentando os valores atualizados
