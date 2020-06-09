@@ -139,3 +139,43 @@ info.greet_user()
 
 priv = Admin('vinicius', 'azevedo', 28, 'mauá')
 priv.show_privileges()
+
+'''
+9.8 - Privilégios: Escreva uma classe Privileges separada. A classe deve ter um atributo privileges que
+armazene uma lista de strings conforme descrita no exercicio 9.7. Transfira o método show_privileges()
+para essa classe. Crie uma instância de Privileges como um atributo da classe admin. Crie uma nova instância
+de admin e use seu metodo para exibir os privilégios.'''
+print('\n9.8 - Privilégios')
+class User():
+    def __init__(self, first_name, last_name, age, city='santo andre'):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.city = city
+    def describe_user(self):
+        print('\nNome: ' + self.first_name.title() + ' ' + self.last_name.title() + ', Cidade: ' + self.city.title() + ', Idade: ' + str(self.age) + '.')
+    def greet_user(self):
+        full_name = self.first_name + ' ' + self.last_name
+        print('Olá ' + full_name.title() + ', seja bem vindo ao Itaú!' )
+class Admin(User):
+    def __init__(self, first_name, last_name, age, city='santo andre'):
+        super().__init__(first_name, last_name, age, city=city)
+        
+
+    def show_privileges(self):
+        print('Os privilégios desse usuário são:')
+        for n in self.privileges:
+            print(n.capitalize() + '.')   
+
+class Privileges():
+    def __init__(self, privileges):
+    self.privileges = ['can add post', 'can delete post', 'can ban user']
+
+
+
+info = User('vinicius', 'azevedo', 28, 'mauá')
+info.describe_user()
+info.greet_user()
+
+priv = Admin('vinicius', 'azevedo', 28, 'mauá')
+priv.show_privileges()
