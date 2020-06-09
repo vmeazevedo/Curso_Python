@@ -1,0 +1,20 @@
+Classe-Pai
+class Restaurant():
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+Classe-filha:
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['morango','chocolate','caramelo'] 
+
+Atributo de uma classe são os valores da classe:
+self.flavors
+
+Método de uma classe são as funções para realizar algo:
+def describe_flavorsa(self):
+
+Instância de uma classe são os nomes que instanciamos a classe:
+sorvete = IceCreamStand('ragazzo','organizado'
