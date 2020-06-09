@@ -179,3 +179,8 @@ info.greet_user()
 #Apresenta info de privilégios
 priv = Admin('vinicius', 'azevedo', 28, 'mauá')
 priv.privilegios.show_privileges()
+
+
+
+'''
+9.9 - Upgrade de bateria:
