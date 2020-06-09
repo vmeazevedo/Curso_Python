@@ -70,12 +70,10 @@ my_tesla.battery.get_range()
 
 '''
 9.6 - Sorveteria: Uma sorveteria é um tipo específico de restaurante. Escreva uma classe chamada IceCreamStand
- que herde da classe Restaurant escrita no ex 9.1. Qualquer versão da classe funcionará, basta escolher aquela 
- de que você mais gosta. Adicione um atributo chamado flavors que armazene uma lista de sabores de sorvete.
+ que herde da classe Restaurant escrita no ex 9.1. Adicione um atributo chamado flavors que armazene uma lista de sabores de sorvete.
  Escreva um método para mostrar esses sabores. Crie uma instância de IceCreamStand e chame esse método.'''
- print('\n9.6 - Sorveteria')
- class Restaurant():
-
+print('\n9.6 - Sorveteria')
+class Restaurant():
     def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
@@ -86,6 +84,19 @@ my_tesla.battery.get_range()
     def open_restaurant(self):
         print('O restaurante ' + self.restaurant_name.title() + ' está aberto!')
 
+class IceCreamStand(Restaurant):                                        #Classe que herda Restaurant criada
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['morango','chocolate','caramelo']               #Atributo flavors adicionado a classe filha
+    
+    def describe_flavors(self):                                         #Método escrito para demostrar os sabores disponíveis
+        print('Os sabores disponíveis são: ')
+        for n in self.flavors:
+            print(n.title() + '.')
+        
 restaunt = Restaurant('Ragazzo', 'organizada')
 restaunt.describe_restaurant()
 restaunt.open_restaurant()
+
+sorvete = IceCreamStand('Ragazzo', 'organizada')                        #Instância de IceCreamStand criada
+sorvete.describe_flavors()                                              #Chamando o método com as informações de sabores.
