@@ -1,4 +1,5 @@
 '''Uma classse que pode ser usada para representar um carro.'''
+
 class Car():
     '''Uma tentativa simples de representar um carro.'''
     def __init__(self, make, model, year):
