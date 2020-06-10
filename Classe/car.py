@@ -48,7 +48,7 @@ class Battey():
     message = 'This car can go approximately ' + str(range) + ' miles on a full charge.'
     print(message)
 
-class EletricCar(Car):
+class ElectricCar(Car):
     '''Modela aspectos de um carro específicos de veículos elétricos.'''
     def __init__(self, make, model, year):
         '''
