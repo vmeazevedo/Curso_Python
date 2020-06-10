@@ -1,3 +1,7 @@
+'''Um conjunto de classes que pode ser usado para representar carros elétricos.'''
+
+from car import Car
+
 class Battey():
     '''Uma tentativa simples de modelar uma bateria para um carro elétrico.'''
     def __init__(self, battery_size = 70):
