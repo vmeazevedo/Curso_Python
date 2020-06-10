@@ -45,8 +45,8 @@ class Battey():
         elif self.battery_size == 85:
             range = 270
 
-    message = 'This car can go approximately ' + str(range) + ' miles on a full charge.'
-    print(message)
+        message = 'This car can go approximately ' + str(range) + ' miles on a full charge.'
+        print(message)
 
 class ElectricCar(Car):
     '''Modela aspectos de um carro específicos de veículos elétricos.'''
