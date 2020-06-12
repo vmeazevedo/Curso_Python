@@ -24,3 +24,11 @@ with open(filename) as file_object:
         print(line.rstrip())
 
 #Criando uma lista de linhas de um arquivo
+filename = 'C:\\Users\\pqcir\\Documents\\MeusProjetos\\Curso_Python\\Arquivo_Exceções\\pi_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()                 #O metodo readlines armazena cada linha do arquivo em uma lista.
+
+for line in lines:
+    print(line.rstrip())
+
+    
