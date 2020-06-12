@@ -2,7 +2,7 @@ import os
 
 #Importando um arquivo utilizando 'os'
 with open(os.path.join(os.path.dirname(__file__), 'pi_digits.txt')) as file_object:       
-    contents = file_object.read()
+    contents = file_object.read()               #lemos o seu conteúdo com o método read() que coloca todo o conteúdo do arquivo em uma string única.
     print(contents.rstrip())
 
 #Importando um arquivo por diretorio absoluto
