@@ -26,4 +26,22 @@ with open(filename) as file_object:                                             
     lines = file_object.readlines()                                                                             #Acessamos a variável com o metodo readlines
 
 for n in lines:                                                                                                 #Para cada item dentro da variável            
-    print(n.rstrip())                                                                                           #Printamos o conteúdo formatado
+    print(n.rstrip())      
+print()                                                                                         #Printamos o conteúdo formatado
+
+'''
+10.2 - Aprendendo C: Você pode usar o metodo replace() para substituir qualquer palavra por uma palavra
+diferente em uma string. Eis um exemplo rápido que mostra como substituir a palavra 'dog' por 'cat' em
+uma frase:
+message = 'I really like dogs.'
+message.replace('dog','cat')
+I really like cats.
+
+Leia cada linha do arquivo learning_python.txt que você acabou de criar e substitua a palavra Python pelo
+nome de outra linguagem, por exemplo, C. Mostre cada linha modificada na tela.
+'''
+filename = 'C:\\Users\\pqcir\\Documents\\MeusProjetos\\Curso_Python\\Arquivo_Exceções\\learning_python.txt'     #Identificamos o local do arquivo
+with open(filename) as file_object:
+    conteudo = file_object.read()
+    X = conteudo.replace('Python','C')                                                     #Como objeto não tem o atributo replace, precisamos salvar ele em uma variável
+    print(X.rstrip())
