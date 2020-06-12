@@ -5,7 +5,6 @@ with open(os.path.join(os.path.dirname(__file__), 'pi_digits.txt')) as file_obje
     contents = file_object.read()
     print(contents.rstrip())
 
-
 #Importando um arquivo por diretorio absoluto
 print()
 with open('C:\\Users\\pqcir\\Documents\\MeusProjetos\\Curso_Python\\Arquivo_Exceções\\pi_digits.txt') as file_object:
@@ -30,4 +29,3 @@ with open(filename) as file_object:
 
 for line in lines:
     print(line.rstrip())
-
