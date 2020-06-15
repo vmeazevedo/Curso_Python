@@ -39,3 +39,11 @@ with open(filename, 'a') as file_object:
     file_object.write('I also love finding meaning in large datasets. \n')
     file_object.write('I love creating apps that can run in a browser. \n')
 
+'''
+10.3 - Convidado: Escreva um programa que pergunte o nome ao usuário. Quando ele responder, escreva o nome em um
+arquivo guest.txt.'''
+print('\n10.3 - Convidado')
+nome = input('Por gentileza, qual o seu nome? ')
+filename = 'Arquivo_Exceções\\guest.txt'
+with open(filename,'w') as file_object:
+    file_object.write(nome.title()+'.\n')
