@@ -42,8 +42,54 @@ with open(filename, 'a') as file_object:
 '''
 10.3 - Convidado: Escreva um programa que pergunte o nome ao usuário. Quando ele responder, escreva o nome em um
 arquivo guest.txt.'''
-print('\n10.3 - Convidado')
-nome = input('Por gentileza, qual o seu nome? ')
-filename = 'Arquivo_Exceções\\guest.txt'
-with open(filename,'w') as file_object:
-    file_object.write(nome.title()+'.\n')
+# print('\n10.3 - Convidado')
+# nome = input('Por gentileza, qual o seu nome? ')
+# filename = 'Arquivo_Exceções\\guest.txt'
+# with open(filename,'w') as file_object:
+#     file_object.write(nome.title()+'.\n')
+
+'''
+10.4 - Lista de convidados: Escreva um laço while que pergunte o nome aos usuários. Quando fornecerem seus nomes,
+apresente uma saudação na tela e acrescente uma linha que registre a visita do usuário em um arquivo chamado guest_book.txt.
+Certifique-se de que cada entrada esteja em uma nova linha do arquivo.
+'''
+# print('\n10.4 - Lista de convidados')
+# filename = 'Arquivo_Exceções\\guest_list.txt'
+# while True:
+#     nome = input('Por favor diga o seu nome: ')
+#     with open(filename, 'a') as file_object:
+#         file_object.write(nome.title() + '.\n')
+#         print('Olá ' + nome.title() + '.')
+#     escolha = input('Temos um novo registro? [S/N]: ')
+#     if escolha == 's':
+#         continue
+#     else:
+#         break
+
+'''
+10.5 - Enquete sobre programação: Escreva um laço while que pergunte as pessoas por que elas gostam de programação.
+Sempre que alguém fornecer um motivo, acrescente-o em um arquivo que armazene todas as respostas.
+'''
+print('\n10.5 - Enquete sobre programação')
+filename = 'Arquivo_Exceções\\enquete.txt'
+while True:
+    enquete = input('Por que você gosta de programação? ')
+    with open(filename,'a') as file_object:
+        file_object.write(enquete.capitalize() + '.\n')
+    escolha = input('Temos um novo registro? [S/N]: ')
+    if escolha == 's':
+        continue
+    else:
+        break
+
+
+filename = 'Arquivo_Exceções\\enquete_2.txt'
+while True:
+    enquete = input('Por que você gosta de programação? ')
+    with open(filename,'a') as file_object:
+        file_object.write(enquete.capitalize() + '.\n')
+    escolha = input('Temos um novo registro? [S/N]: ')
+    if escolha == 's':
+        continue
+    else:
+        break
