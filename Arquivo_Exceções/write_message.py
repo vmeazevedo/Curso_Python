@@ -70,23 +70,27 @@ Certifique-se de que cada entrada esteja em uma nova linha do arquivo.
 10.5 - Enquete sobre programação: Escreva um laço while que pergunte as pessoas por que elas gostam de programação.
 Sempre que alguém fornecer um motivo, acrescente-o em um arquivo que armazene todas as respostas.
 '''
-print('\n10.5 - Enquete sobre programação')
-filename = 'Arquivo_Exceções\\enquete.txt'
-while True:
-    enquete = input('Por que você gosta de programação? ')
-    with open(filename,'a') as file_object:
-        file_object.write(enquete.capitalize() + '.\n')
-    escolha = input('Temos um novo registro? [S/N]: ')
-    if escolha == 's':
-        continue
-    else:
-        break
+# print('\n10.5 - Enquete sobre programação')
+# filename = 'Arquivo_Exceções\\enquete.txt'
+# while True:
+#     enquete = input('Por que você gosta de programação? ')
+#     with open(filename,'a') as file_object:
+#         file_object.write(enquete.capitalize() + '.\n')
+#     escolha = input('Temos um novo registro? [S/N]: ')
+#     if escolha == 's':
+#         continue
+#     else:
+#         break
 
 
 filename = 'Arquivo_Exceções\\enquete_2.txt'
 while True:
+    nome = input('Por favor, informe seu nome: ')
+    filler = ': '
     enquete = input('Por que você gosta de programação? ')
     with open(filename,'a') as file_object:
+        file_object.write(nome.title())
+        file_object.write(filler)
         file_object.write(enquete.capitalize() + '.\n')
     escolha = input('Temos um novo registro? [S/N]: ')
     if escolha == 's':
