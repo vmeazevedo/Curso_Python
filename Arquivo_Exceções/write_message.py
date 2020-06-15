@@ -15,3 +15,9 @@ filename = "Arquivo_Exceções\\programming2.txt"         #Para definir diretór
 with open(filename, 'w') as file_object:
     file_object.write('I love programming2.')  
 
+#Escrevendo várias linhas
+filename =  "Arquivos_Exceções\\programming.txt"
+with open(filename, 'w') as file_object:
+    file_object.write('I love programming.')
+    file_object.write('I love creating new games.')
+
