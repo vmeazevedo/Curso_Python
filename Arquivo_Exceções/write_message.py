@@ -16,8 +16,17 @@ with open(filename, 'w') as file_object:
     file_object.write('I love programming2.')  
 
 #Escrevendo várias linhas
-filename =  "Arquivos_Exceções\\programming.txt"
+filename =  "Arquivo_Exceções\\programming.txt"
 with open(filename, 'w') as file_object:
     file_object.write('I love programming.')
-    file_object.write('I love creating new games.')
+    file_object.write('I love creating new games.')     #A função write não acrescenta nenhuma quebra de linha ao texto
+
+filename = 'Arquivo_Exceções\\programming.txt'
+with open(filename, 'w') as file_object:
+    file_object.write('I love programming.\n')          #Add a quebra de linha para formatar melhor o nosso código
+    file_object.write('I love creating new games.\n')
+
+#======================================================
+
+
 
