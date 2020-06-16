@@ -64,12 +64,10 @@ Some-os e mostre o resultado. Capture o TypeError caso algum dos valores de entr
 de erro simpatica. Teste seu programa fornecendo dois numeros e, em seguida, digite um texto no lugar de um numero.
 '''
 print('\nAdição')
-
-    try:
-        num1 = int(input('Digite o primeiro numero: '))
-        num2 = int(input('Digite o segundo numero: '))
-        soma = num1+num2
-        print(f'O resultado da soma é {soma}.')
-        
-    except:
-        print('Digite apenas números inteiros e não letras.')
+try:
+    num1 = int(input('Digite o primeiro numero: '))
+    num2 = int(input('Digite o segundo numero: '))
+    soma = num1+num2
+    print(f'O resultado da soma é {soma}.')
+except:
+    print('Digite apenas números inteiros e não letras.')
