@@ -87,3 +87,19 @@ de erro simpatica. Teste seu programa fornecendo dois numeros e, em seguida, dig
 #     except:
 #         print('Digite apenas números inteiros e não letras.')
         
+'''
+10.7 - Calculadora para adição: Coloque o código anterior em um laço while para que o usuário possa continuar fornecendo numeros,
+mesmo se cometerem um erro e digitarem um texto no lugar do numero.'''
+print('\nCalculadora para adição')
+while True:
+    try:
+        num1 = int(input('Digite o primeiro numero: '))
+        num2 = int(input('Digite o segundo numero: '))
+    except:
+        print('Digite apenas números inteiros e não letras.')
+    else:
+        soma = num1+num2
+        print(f'O resultado da soma é {soma}.')
+        break
+
+'''
