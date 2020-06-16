@@ -120,3 +120,18 @@ def ler_texto(filename):
 filename = 'Arquivo_Exceções\\cats.txt', 'Arquivo_Exceções\\dogs.txt'
 for n in filename:
     ler_texto(n)
+
+'''
+10.9 - Gatos e cachorros silenciosos: Modifique o seu bloco except para falhar silenciosamente caso um dos arquivos esteja ausente.'''
+print('\nGatos e cachorros')
+def ler_texto(filename):
+    try:
+        with open(filename) as file_object:
+            contents = file_object.read()
+            print(f'O conteudo do arquivo é:\n{contents}')
+    except FileNotFoundError:
+        pass
+
+filename = 'Arquivo_Exceções\\cats.txt', 'Arquivo_Exceções\\dogs.txt'
+for n in filename:
+    ler_texto(n)
