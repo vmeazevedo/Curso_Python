@@ -90,20 +90,33 @@ de erro simpatica. Teste seu programa fornecendo dois numeros e, em seguida, dig
 '''
 10.7 - Calculadora para adição: Coloque o código anterior em um laço while para que o usuário possa continuar fornecendo numeros,
 mesmo se cometerem um erro e digitarem um texto no lugar do numero.'''
-print('\nCalculadora para adição')
-while True:
-    try:
-        num1 = int(input('Digite o primeiro numero: '))
-        num2 = int(input('Digite o segundo numero: '))
-    except:
-        print('Digite apenas números inteiros e não letras.')
-    else:
-        soma = num1+num2
-        print(f'O resultado da soma é {soma}.')
-        break
+# print('\nCalculadora para adição')
+# while True:
+#     try:
+#         num1 = int(input('Digite o primeiro numero: '))
+#         num2 = int(input('Digite o segundo numero: '))
+#     except:
+#         print('Digite apenas números inteiros e não letras.')
+#     else:
+#         soma = num1+num2
+#         print(f'O resultado da soma é {soma}.')
+#         break
 
 '''
 10.8 - Gatos e cachorros: Crie dois arquivos, cats.txt e dogs.txt. Armazene pelo menos três nomes de gatos no primeiro arquivo e três nomes
 de cachorro no segundo arquivo. Escreva um programa que tente ler esses arquivos e mostre o conteudo do arquivo na tela. Coloque seu código
 em um bloco try-except para capturar o erro FileNotFound e apresente uma mensagem simpatica caso o arquivo nao esteja presente. Mova um dos 
 arquivos para um local diferente de seu sistema e garante que o codigo no bloco except seja executado de forma apropriada.'''
+print('\nGatos e cachorros')
+def ler_texto(filename):
+    try:
+        with open(filename) as file_object:
+            contents = file_object.read()
+            print(f'O conteudo do arquivo é:\n{contents}')
+    except FileNotFoundError:
+        msg = 'Sorry, the file ' + filename + ' does not exist.'
+        print(msg)
+
+filename = 'Arquivo_Exceções\\cats.txt', 'Arquivo_Exceções\\dogs.txt'
+for n in filename:
+    ler_texto(n)
