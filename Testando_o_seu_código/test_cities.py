@@ -19,3 +19,15 @@ class NamesTestCase(unittest.TestCase):                        #Criamos uma clas
         self.assertEqual(info_pais, 'Santiago, Chile')          #Comparei o valor de retorno com a string esperada
 
 unittest.main()
+
+
+'''
+11.2 - População: Modifique sua função para que ela exija um terceiro parametro, population. Agora ela deve devovler uma unica string
+no formato Cidade, Pais - população xxx, por exemplo, Santiago, Chile - população 50000000. Execute test_cities.py novamente. Certifique-se de que
+test_city_country() falhe dessa vez.
+
+Modifique a função para que o parametro population seja opcional. Execute test_cities.py novamente e garanta que o test_city_country() passe.
+
+Escreva um segundo teste chamado test_city_country_population() que verifique se voce pode chamar sua função com os valores 'santiago', 'chile'
+e 'population=50000000'. Execute test_cities.py novamente e garanta que esse novo teste passe.
+'''
