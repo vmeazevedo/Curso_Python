@@ -14,6 +14,8 @@ from city_functions import dados_pais
 class NamesTestCase(unittest.TestCase):                        #Criamos uma classe que conterá varios testes de unidades, essa classe deve herdar da classe unittest.TestCase
     '''Testes para 'city_function.py'.'''
 
-    def test_city_country(self):
-        info_pais = dados_pais('santiago','chile')
-        self.assertEqual(info_pais, 'Santiago, Chile')
+    def test_city_country(self):                                #Criei um metodo para conferir se a função funciona com os dois valores
+        info_pais = dados_pais('santiago','chile')              #Chamei a função que vou testar e armazei os dados em um valor de retorno
+        self.assertEqual(info_pais, 'Santiago, Chile')          #Comparei o valor de retorno com a string esperada
+
+unittest.main()
