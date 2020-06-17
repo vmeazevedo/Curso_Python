@@ -54,6 +54,19 @@ def greet_user():
 greet_user()
 
 
+'''
+10.11 - Número favorito: Escreva um programa que pergunte qual é o numero favorito de um usuário. Use json.dump() para
+armazenar esse numero em um arquivo. Escreva um programa separado que leia esse valor e apresente a mensagem 'Eu sei
+qual é o seu número favorito! É _______'.'''
+print('\n10.11 - Numero favorito')
+import json
+username = input('Qual o seu numero favorito? ')
+filename = 'Arquivo_Exceções\\number.json'                           
+with open(filename,'w') as file_object:
+    json.dump(username, file_object)
+
+
+
 
 
 
