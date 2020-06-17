@@ -11,6 +11,11 @@ class NamesTestCase(unittest.TestCase):                        #Criamos uma clas
         formatted_name = get_formatted_name('janis','joplin')  #Chamamos a função que queremos testar e armazenamos ela em um valor de retorno.
         self.assertEqual(formatted_name, 'Janis Joplin')       #Compara o valor em formatted_name com a string 'Janis Joplin' e retorna o resultado.
 
+    def test_first_middle_last_name(self):
+        '''Nomes como 'Armando Augusto Mendes' funcionam?'''
+        formatted_name = get_formatted_name('armando','mendes','augusto')
+        self.assertEqual(formatted_name, 'Armando Augusto Mendes')
+
 unittest.main()                                                #Diz ao Python para executar os testes desse arquivo.
 
 
