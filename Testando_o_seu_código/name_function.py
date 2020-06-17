@@ -11,9 +11,9 @@
 #     return full_name.title()
 
 #Testando uma função - Essa função sempre passará em nosso teste unitário
-def get_formatted_name(first, last, midle=''):
+def get_formatted_name(first, last, middle=''):
     '''Gera um nome completo formatado de modo elegante.'''
-    if midle:
+    if middle:
         full_name = first + ' ' + middle + ' ' + last
     else:
         full_name = first + ' ' + last
