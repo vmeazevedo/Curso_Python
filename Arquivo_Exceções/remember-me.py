@@ -58,19 +58,31 @@ greet_user()
 10.11 - Número favorito: Escreva um programa que pergunte qual é o numero favorito de um usuário. Use json.dump() para
 armazenar esse numero em um arquivo. Escreva um programa separado que leia esse valor e apresente a mensagem 'Eu sei
 qual é o seu número favorito! É _______'.'''
-print('\n10.11 - Numero favorito')
+# print('\n10.11 - Numero favorito')
+# import json
+# number = input('Qual o seu numero favorito? ')
+# filename = 'Arquivo_Exceções\\number.json'                           
+# with open(filename,'w') as file_object:
+#     json.dump(number, file_object)
+
+'''
+10.12 - Lembrando o número favorito: Combine os dois programas do Exercicio anterior em um unico arquivo. Se o numero já estiver
+armazenado, informe o número favorito ao usuário. Caso contrário, pergunte ao usuário qual é o seu numero favorito e armazene-o
+em um arquivo. Execute o programa duas vezes para garantir que ele funciona.
+'''
+print('\n10.12 - Lembrando o numero favorito')
 import json
-username = input('Qual o seu numero favorito? ')
 filename = 'Arquivo_Exceções\\number.json'                           
-with open(filename,'w') as file_object:
-    json.dump(username, file_object)
-
-
-
-
-
-
-
+try:
+    with open(filename) as file_object:
+        number = json.load(file_object)                                    
+except FileNotFoundError:
+    number = input('Qual o seu numero favorito? ')                                 
+    with open(filename,'w') as file_object:                                 
+        json.dump(number, file_object)                                    
+        print('Agora irei sempre me lembra que seu numero favorito é, ' + number + '!')  
+else:
+    print('Eu sei qual é o seu número favorito! É, ' +number+ '!')
 
 
 
