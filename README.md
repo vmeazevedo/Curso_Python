@@ -1,4 +1,4 @@
-## Seja bem-vindo ao meu GitHub!
+## Seja bem-vindo!
 
 Olá, meu nome é Vinícius Azevedo. Moro atualmente em São Paulo, Brasil.
 
@@ -13,7 +13,7 @@ Você pode entrar em contato comigo pelos canais abaixo:
 - Twitter: @vmeazevedo
 
 
-## Welcome to my GitHub!
+## Welcome!
 
 Hello, my name is Vinícius Azevedo. I currently live in São Paulo, Brazil.
 
