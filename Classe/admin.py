@@ -25,10 +25,10 @@ class Privileges():
         for n in self.privileges:
             print(n.capitalize() + '.') 
 
-# #Apresenta infos de usuário
-# info = User('vinicius', 'azevedo', 28, 'mauá')
-# info.describe_user()
-# info.greet_user()
-# #Apresenta info de privilégios
-# priv = Admin('vinicius', 'azevedo', 28, 'mauá')
-# priv.privilegios.show_privileges()
+#Apresenta infos de usuário
+info = User('vinicius', 'azevedo', 28, 'mauá')
+info.describe_user()
+info.greet_user()
+#Apresenta info de privilégios
+priv = Admin('vinicius', 'azevedo', 28, 'mauá')
+priv.privilegios.show_privileges()
